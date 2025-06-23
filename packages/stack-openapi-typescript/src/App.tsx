@@ -5,7 +5,7 @@ import {
   useDeletePost,
   usePosts,
   useUpdatePost,
-} from "./hooks/usePosts";
+} from "./hooks/user-posts";
 
 function App() {
   const [selectedPostId, setSelectedPostId] = useState<string | null>(null);

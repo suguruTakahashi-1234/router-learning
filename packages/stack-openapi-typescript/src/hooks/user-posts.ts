@@ -7,13 +7,6 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { $api } from "../api/client";
 
-// export const usePosts = () => {
-//   return useQuery({
-//     ...getPostsApiOptions(),
-//     select: (data) => data.data, // レスポンスの階層を簡略化
-//   });
-// };
-
 /**
  * 投稿一覧を取得するフック
  */
