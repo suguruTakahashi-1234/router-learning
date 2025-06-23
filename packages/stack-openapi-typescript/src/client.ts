@@ -6,8 +6,8 @@
 
 import type { OpenapiQueryClient } from "openapi-react-query";
 import createClient from "openapi-react-query";
-import { client as fetchClient } from "../api";
-import type { paths } from "../generated/api";
+import { client as fetchClient } from "./api";
+import type { paths } from "./generated/api";
 
 /**
  * React Query用のAPIクライアント
