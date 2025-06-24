@@ -1,14 +1,10 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { PostForm } from "../../components/PostForm";
-import type { components } from "../../generated/api";
-import { useCreatePost } from "../../user-posts";
+import { useNavigate } from "@tanstack/react-router";
+import { PostForm } from "../components/PostForm";
+import type { components } from "../generated/api";
+import { useCreatePost } from "../user-posts";
 
-export const Route = createFileRoute("/posts/new")({
-  component: PostCreatePage,
-});
-
-function PostCreatePage() {
-  const navigate = useNavigate();
+export function PostNewPage() {
+  const navigate = useNavigate({ from: "/posts/new" });
   const createPost = useCreatePost();
 
   const handleSubmit = async (data: components["schemas"]["CreatePost"]) => {

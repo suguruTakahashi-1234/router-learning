@@ -91,7 +91,8 @@
       "Bash(chmod:*)",
       "WebFetch(domain:storybook.js.org)",
       "WebFetch(domain:openapi-ts.dev)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:tanstack.com)"
     ],
     "deny": []
   }

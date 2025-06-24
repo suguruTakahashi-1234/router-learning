@@ -1,15 +1,12 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { PostForm } from "../../../components/PostForm";
-import type { components } from "../../../generated/api";
-import { usePost, useUpdatePost } from "../../../user-posts";
+import { useNavigate } from "@tanstack/react-router";
+import { PostForm } from "../components/PostForm";
+import type { components } from "../generated/api";
+import { postEditRoute } from "../router";
+import { usePost, useUpdatePost } from "../user-posts";
 
-export const Route = createFileRoute("/posts/$postId/edit")({
-  component: PostEditPage,
-});
-
-function PostEditPage() {
-  const { postId } = Route.useParams();
-  const navigate = useNavigate();
+export function PostEditPage() {
+  const { postId } = postEditRoute.useParams();
+  const navigate = useNavigate({ from: "/posts/$postId/edit" });
   const { data, isLoading, error } = usePost(postId);
   const updatePost = useUpdatePost();
 

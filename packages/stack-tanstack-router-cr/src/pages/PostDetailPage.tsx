@@ -1,14 +1,11 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
-import { useDeletePost, usePost } from "../../../user-posts";
+import { postDetailRoute } from "../router";
+import { useDeletePost, usePost } from "../user-posts";
 
-export const Route = createFileRoute("/posts/$postId/")({
-  component: PostDetailPage,
-});
-
-function PostDetailPage() {
-  const { postId } = Route.useParams();
-  const navigate = useNavigate();
+export function PostDetailPage() {
+  const { postId } = postDetailRoute.useParams();
+  const navigate = useNavigate({ from: "/posts/$postId" });
   const { data, isLoading, error } = usePost(postId);
   const deletePost = useDeletePost();
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
@@ -45,6 +42,7 @@ function PostDetailPage() {
       <div className="mb-6">
         <Link
           to="/"
+          from="/posts/$postId"
           className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
         >
           ← 一覧に戻る
@@ -74,6 +72,7 @@ function PostDetailPage() {
           <div className="flex gap-2">
             <Link
               to="/posts/$postId/edit"
+              from="/posts/$postId"
               params={{ postId }}
               className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition-colors"
             >

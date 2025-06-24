@@ -10,6 +10,7 @@ export function PostCard({ post }: PostCardProps) {
     <article className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
       <Link
         to="/posts/$postId"
+        from="/"
         params={{ postId: post.id }}
         className="block"
       >

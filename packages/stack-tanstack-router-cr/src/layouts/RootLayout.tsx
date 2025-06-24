@@ -1,8 +1,8 @@
-import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
+import { Link, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
-export const Route = createRootRoute({
-  component: () => (
+export function RootLayout() {
+  return (
     <>
       <div className="min-h-screen bg-gray-50">
         {/* ヘッダー */}
@@ -11,6 +11,7 @@ export const Route = createRootRoute({
             <div className="flex h-16 items-center justify-between">
               <Link
                 to="/"
+                from="/"
                 className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors"
               >
                 📝 ブログ管理システム
@@ -18,6 +19,7 @@ export const Route = createRootRoute({
               <nav>
                 <Link
                   to="/posts/new"
+                  from="/"
                   className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition-colors"
                 >
                   新規投稿
@@ -34,5 +36,5 @@ export const Route = createRootRoute({
       </div>
       <TanStackRouterDevtools />
     </>
-  ),
-});
+  );
+}
