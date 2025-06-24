@@ -3,7 +3,7 @@ import { PostForm } from "../components/PostForm";
 import type { components } from "../generated/api";
 import { useCreatePost } from "../user-posts";
 
-export function PostCreatePage() {
+export default function PostCreatePage() {
   const navigate = useNavigate();
   const createPost = useCreatePost();
 

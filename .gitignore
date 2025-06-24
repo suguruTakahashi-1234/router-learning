@@ -72,6 +72,7 @@ __diff_output__/
 # Misc
 .turbo
 .tanstack/
+.react-router/
 
 # Storybook
 *storybook.log

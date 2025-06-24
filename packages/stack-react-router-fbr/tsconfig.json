@@ -1,12 +1,13 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "./src",
+    "rootDirs": [".", "./.react-router/types"],
     "outDir": "./dist",
     "jsx": "react-jsx",
+    "types": ["@react-router/dev/routes", "vite/client"],
 
     "isolatedDeclarations": false
   },
-  "include": ["src"],
+  "include": ["src", ".react-router/types/**/*"],
   "exclude": ["node_modules", "dist"]
 }

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { PostCard } from "../components/PostCard";
 import { usePosts } from "../user-posts";
 
-export function HomePage() {
+export default function HomePage() {
   const { data: posts, isLoading, error } = usePosts();
 
   if (isLoading) {

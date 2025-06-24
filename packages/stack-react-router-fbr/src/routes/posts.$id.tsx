@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useDeletePost, usePost } from "../user-posts";
 
-export function PostDetailPage() {
+export default function PostDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { data, isLoading, error } = usePost(id || "");
@@ -115,7 +115,7 @@ export function PostDetailPage() {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity z-40"
             onClick={() => setShowDeleteConfirm(false)}
           />
-          
+
           {/* モーダル本体 */}
           <div className="fixed inset-0 z-50 overflow-y-auto">
             <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">

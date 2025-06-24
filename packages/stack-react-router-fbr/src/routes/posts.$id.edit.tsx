@@ -3,7 +3,7 @@ import { PostForm } from "../components/PostForm";
 import type { components } from "../generated/api";
 import { usePost, useUpdatePost } from "../user-posts";
 
-export function PostEditPage() {
+export default function PostEditPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { data, isLoading, error } = usePost(id || "");

@@ -47,7 +47,8 @@
         "**/dist-storybook/**",
         "**/coverage/**",
         "**/docs/**",
-        "**/routeTree.gen.ts"
+        "**/routeTree.gen.ts",
+        "**/.react-router/**"
       ],
       "linter": {
         "enabled": false
