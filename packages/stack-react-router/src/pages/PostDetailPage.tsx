@@ -108,8 +108,16 @@ export function PostDetailPage() {
 
       {/* 削除確認ダイアログ */}
       {showDeleteConfirm && (
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-50">
-          <div className="fixed inset-0 z-10 overflow-y-auto">
+        <>
+          {/* 背景のオーバーレイ */}
+          <button
+            type="button"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity z-40"
+            onClick={() => setShowDeleteConfirm(false)}
+          />
+          
+          {/* モーダル本体 */}
+          <div className="fixed inset-0 z-50 overflow-y-auto">
             <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
               <div className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
                 <div className="sm:flex sm:items-start">
@@ -148,7 +156,7 @@ export function PostDetailPage() {
               </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </article>
   );
