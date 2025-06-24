@@ -1,9 +1,9 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { PostForm } from "../../components/PostForm";
-import type { components } from "../../generated/api";
-import { usePost, useUpdatePost } from "../../user-posts";
+import { PostForm } from "../components/PostForm";
+import type { components } from "../generated/api";
+import { usePost, useUpdatePost } from "../user-posts";
 
-export const Route = createFileRoute("/posts/$postId/edit")({
+export const Route = createFileRoute("/posts/edit/$postId")({
   component: PostEditPage,
 });
 

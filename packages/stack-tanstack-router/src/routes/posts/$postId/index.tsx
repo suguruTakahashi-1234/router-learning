@@ -1,8 +1,8 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
-import { useDeletePost, usePost } from "../../user-posts";
+import { useDeletePost, usePost } from "../../../user-posts";
 
-export const Route = createFileRoute("/posts/$postId")({
+export const Route = createFileRoute("/posts/$postId/")({
   component: PostDetailPage,
 });
 
