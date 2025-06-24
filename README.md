@@ -15,7 +15,7 @@ router-learning/
 │   ├── stack-react-router-fbr/    # React Router v7 + File-Based Routing
 │   ├── stack-tanstack-router-cbr/ # TanStack Router + Code-Based Routing
 │   └── stack-tanstack-router-fbr/ # TanStack Router + File-Based Routing
-└── shared/                        # 共通APIスキーマ・型定義
+└── openapi.yaml                   # 共通APIスキーマ定義
 ```
 
 各パッケージは同一のブログアプリケーションUIを実装しており、以下の機能を持っています：
