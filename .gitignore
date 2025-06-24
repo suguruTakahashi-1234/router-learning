@@ -71,6 +71,7 @@ __diff_output__/
 
 # Misc
 .turbo
+.tanstack/
 
 # Storybook
 *storybook.log
