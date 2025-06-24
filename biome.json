@@ -46,7 +46,8 @@
         ".claude/settings.local.json",
         "**/dist-storybook/**",
         "**/coverage/**",
-        "**/docs/**"
+        "**/docs/**",
+        "**/routeTree.gen.ts"
       ],
       "linter": {
         "enabled": false
