@@ -1,5 +1,5 @@
 {
-  "name": "@openapi-gen-learning/stack-tanstack-router",
+  "name": "@router-learning/stack-react-router-fsr",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -14,17 +14,14 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.81.2",
-    "@tanstack/react-router": "^1.121.34",
-    "@tanstack/router-vite-plugin": "^1.121.34",
     "openapi-fetch": "^0.14.0",
     "openapi-react-query": "^0.5.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.10",
-    "@tanstack/react-router-devtools": "^1.121.34",
-    "@tanstack/router-plugin": "^1.121.34",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
