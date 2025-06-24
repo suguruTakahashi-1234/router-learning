@@ -6,6 +6,6 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react(), tailwindcss(), TanStackRouterVite()],
   server: {
-    port: 5178,
+    port: 5160,
   },
 });
