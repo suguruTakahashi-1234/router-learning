@@ -18,7 +18,8 @@
     "lint:fix": "biome check --write",
     "lint:fix:unsafe": "biome check --write --unsafe",
     "verify": "pnpm run generate && pnpm run build && pnpm run typecheck && pnpm run lint && pnpm run test",
-    "mock": "prism mock ./openapi.yaml -h 0.0.0.0 -p 4010"
+    "mock": "prism mock ./openapi.yaml -h 0.0.0.0 -p 4010",
+    "clean": "pnpm --filter './packages/*' --parallel clean"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.5",
