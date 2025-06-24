@@ -6,7 +6,7 @@
   "packageManager": "pnpm@10.12.1",
   "engines": {
     "node": ">=24",
-    "pnpm": ">=10.12"
+    "pnpm": ">=10"
   },
   "scripts": {
     "dev": "pnpm --filter './packages/*' --parallel dev",
