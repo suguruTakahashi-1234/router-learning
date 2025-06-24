@@ -14,7 +14,7 @@ export function RootLayout() {
                 from="/"
                 className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors"
               >
-                📝 ブログ管理システム
+                📝 ブログ管理システム (TanStack Router + Code-based)
               </Link>
               <nav>
                 <Link
